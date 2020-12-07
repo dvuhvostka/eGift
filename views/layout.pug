@@ -2,9 +2,30 @@ doctype html
 html
   head
     title= title
+    block scripts
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js")
     script(src="https://use.fontawesome.com/253488afed.js")
     script(src="https://kit.fontawesome.com/5424c78a9d.js" crossorigin="anonymous")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
   body
+    .sandwich_header_wrap
+      .sandwich_header
+        .brand_logo
+          a(href="/")
+            img(src='/images/logo2.png')
+        .sandwich_button
+          a.btn_hum
+            i.fa.fa-bars
+            i.fa.fa-times.d-none
+    .sandwich_menu_wrap
+      .sandwich_menu
+        ul.ul_sandwich
+          li.ul-nav-li-sandwich
+            a(href="/#buy" class="li-item sandwich-item") Покупка E-GIFTCARD
+          li.ul-nav-li-sandwich
+            a(href="/#get" class="li-item sandwich-item") Получить деньги
+          li.ul-nav-li-sandwich
+            a(href="/#faq" class="li-item sandwich-item") Как работает
     block content
+      

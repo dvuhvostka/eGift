@@ -1,0 +1,40 @@
+extends layout
+
+block scripts
+  link(rel='stylesheet' href='/stylesheets/offer.css')
+block content
+  .block-section.block.w-100
+    .html-header#header
+      .html-header-topside
+          .topside-left
+            span.lang_change
+          .topside-brand-logo
+            img(src="./../images/logo2.png" alt="" class="logo")
+          .topside-right
+            span.topside-span support@e-giftCard.org
+      .html-header-backside
+        ul.ul-nav.header-backsite-ul
+          li.ul-nav-li
+            a(href="/#buy" class="li-item") Покупка E-GIFTCARD
+          li.ul-nav-li
+            a(href="/#get" class="li-item") Получить деньги
+          li.ul-nav-li
+            a(href="/#faq" class="li-item") Как работает
+  .block-section.block.w-100.offer
+    .offer_wrapper
+      .img_wrap
+        img.bank_img(src="images/bank.png")
+      .offer_info
+        .sub_block
+          p.label № Операции:
+          p.info 16283746842
+        .sub_block
+          p.label Магазин:
+          p.info ООО "e-giftCard Corp."
+      .text_silence_ex
+        p Сейчас вам придет смс-код, введите его для подтверждения платежа.
+      .text_silence_ex
+        p Введите код для подтверждения перевода с e-Voucher на карту.
+      .offer_footer
+        input.form_input(type='text')
+        button.btn.btn_main Подтверждение

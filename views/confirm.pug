@@ -1,0 +1,54 @@
+extends layout
+
+block scripts 
+  link(rel='stylesheet' href='/stylesheets/confirm.css')
+  link(rel='stylesheet' href='/stylesheets/main.css')
+block content
+  .block-section.block.w-100#header
+      .html-header
+        .html-header-topside
+            .topside-left
+              span.lang_change
+            .topside-brand-logo
+              a(href='/')
+                img(src="./../images/logo2.png" alt="" class="logo")
+            .topside-right
+              span.topside-span support@e-giftCard.org
+        .html-header-backside
+          ul.ul-nav.header-backsite-ul
+            li.ul-nav-li
+              a(href="/#buy" class="li-item") Покупка E-GIFTCARD
+            li.ul-nav-li
+              a(href="/#get" class="li-item") Получить деньги
+            li.ul-nav-li
+              a(href="/#faq" class="li-item") Как работает
+  .block-section.block.w-100
+    .main_wrapper
+      .main_content_conf
+        h2.main_header Введите номер вашего 
+          span.brand
+            span.brand_black e-gift
+            span.brand_main Card
+        p.text_center.text_silence.
+          После ввода номера нажмите "Перевести" , 
+          после чего Вас переведет на подтверждение 
+          перевода с Vaucher на Ваш счет.
+        input.form_input(type='text' name='voucher_number')
+        button.btn.btn_main.btn_send Продолжить
+  .block-section.block.footer
+    .footer_background.bg-semi
+      .footer_wrap
+        .row-wrap
+          .left
+            span.semi-header Наши e-mail
+            p support@e-giftCard.org
+              br
+              | partner@e-giftCard.org
+          .right
+            span.semi-header Наш офис
+            p 220015, Беларусь Минск, ул. Малинина 29, оф. 5 
+              br
+              |  e-giftCard Corp 
+        .row-wrap.second_footer
+          .left © Разработка DxZ
+          .right ©2020 All rights Reserved
