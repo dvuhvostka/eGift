@@ -1,0 +1,51 @@
+extends layout
+
+block scripts 
+  link(rel='stylesheet' href='stylesheets/success.css')
+
+block content
+  .block-section.block.w-100#header
+    .html-header
+      .html-header-topside
+          .topside-left
+            span.lang_change
+          .topside-brand-logo
+            img(src="./../images/logo2.png" alt="" class="logo")
+          .topside-right
+            span.topside-span support@e-giftCard.org
+      .html-header-backside
+        ul.ul-nav.header-backsite-ul
+          li.ul-nav-li
+            a(href="/#buy" class="li-item") Покупка E-GIFTCARD
+          li.ul-nav-li
+            a(href="/#get" class="li-item") Получить деньги
+          li.ul-nav-li
+            a(href="/#faq" class="li-item") Как работает
+  .block-section.block.w-100
+    .content_wrapper
+      .some_more_wrapper
+        h1.content_header Платеж еще в обработке
+        i.fas.fa-wallet.wallet
+        p.text_gray Ваш номер e-giftCard: 
+          b EV4003210412439
+    .buttons_wrapper
+      a.btn.btn_outline_main.btn_big.mr(href="/#buy") НОВЫЙ  ПЛАТЕЖ
+      a.btn.btn_main.btn_big(href="/") НА ГЛАВНУЮ  
+  .block-section.block.footer
+    .footer_background.bg-semi
+      .footer_wrap
+        .row-wrap
+          .left
+            span.semi-header Наши e-mail
+            p support@e-giftCard.org
+              br
+              | partner@e-giftCard.org
+          .right
+            span.semi-header Наш офис
+            p 220015, Беларусь Минск, ул. Малинина 29, оф. 5 
+              br
+              |  e-giftCard Corp 
+        .row-wrap.second_footer
+          .left © Разработка DxZ
+          .right ©2020 All rights Reserved
+  script(src='/javascripts/menu.js')

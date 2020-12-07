@@ -10,6 +10,9 @@
   --main-color: #5CDB95;
 }
 
+.fa-times:hover {
+  cursor: pointer;
+}
 .bg-gray{
   background-color: #f2f2f2;
 }
@@ -701,6 +704,7 @@ width: 250px;
 .sandwich_header_wrap, .sandwich_menu_wrap {
   width: 100%;
   display: none;
+  transition-delay: .3s;
 }
 
 .sandwich_header {
