@@ -141,6 +141,11 @@
   flex-direction: column;
 }
 
+.red {
+  color: red;
+  display: none;
+}
+
 @media (max-width: 900px) {
   #header {
     display: none;

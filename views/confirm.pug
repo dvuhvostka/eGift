@@ -25,16 +25,18 @@ block content
   .block-section.block.w-100
     .main_wrapper
       .main_content_conf
-        h2.main_header Введите номер вашего 
-          span.brand
-            span.brand_black e-gift
-            span.brand_main Card
-        p.text_center.text_silence.
-          После ввода номера нажмите "Перевести" , 
-          после чего Вас переведет на подтверждение 
-          перевода с Vaucher на Ваш счет.
-        input.form_input(type='text' name='voucher_number')
-        button.btn.btn_main.btn_send Продолжить
+        form#v_num
+          h2.main_header Введите номер вашего 
+            span.brand
+              span.brand_black e-gift
+              span.brand_main Card
+          p.text_center.text_silence.
+            После ввода номера нажмите "Перевести" , 
+            после чего Вас переведет на подтверждение 
+            перевода с Vaucher на Ваш счет.
+          input.form_input(type='text' name='voucher_number' required)
+          button.btn.btn_main.btn_send#confirm Продолжить
+          script(src='/javascripts/confirm.js')
   .block-section.block.footer
     .footer_background.bg-semi
       .footer_wrap

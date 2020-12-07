@@ -79,4 +79,9 @@ $(document).ready(function(){
         let value = $(this).parent().parent().find('.price-small').html();
         location.href='/pay?value='+value.replace('$', '');
      });
+
+     $('#getmoney').on('submit', (e)=>{
+       e.preventDefault();
+       location.href='/confirm';
+     });
 });

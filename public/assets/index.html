@@ -10,6 +10,7 @@
   <script src="./../javascripts/main.js"></script>
   <script src="https://use.fontawesome.com/253488afed.js"></script>
   <script src="https://kit.fontawesome.com/5424c78a9d.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <title>e-giftCard</title>
 </head>
 <body>
@@ -447,10 +448,10 @@
             <p class="text-center form-text">
               Введите данные куда хотите зачислить средства и перейдите к вводу номера e-giftCard.
             </p>
-            <form action="#" class="form">
+            <form action="#" class="form" id='getmoney'>
               <label for="input1" class="form-label" required>Вариант зачисления</label>
               <div class="input-form">
-                <select name="input1" id="input1" >
+                <select name="input1" id="input1" required>
                   <option value="" selected disabled hidden>Нажмите для выбора</option>
                   <option value="1">Банковская карта BYN</option>
                   <option value="2">Банковская карта RUB</option>
@@ -468,7 +469,7 @@
                 <input type="checkbox" name="checkbox" class="input-form" id="input4" required>
                 <label for="input4" class='form-label'>Я согласен на обработку моих персональных данных</label>
               </div>
-              <button class="btn btn-main btn-form" onclick="window.location.href='/confirm'"><i class="fas fa-wallet wallet"></i>Обналичить</button>
+              <button class="btn btn-main btn-form"><i class="fas fa-wallet wallet"></i>Обналичить</button>
             </form>
           </div>
         </div>

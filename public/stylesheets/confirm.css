@@ -126,6 +126,22 @@ html {
   display: none !important;
 }
 
+.loading {
+  background-image: url("../images/loader.gif");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: none;
+}
+.loading:hover {
+  background-color:  var(--main-color) !important;
+  background-image: url("../images/loader.gif");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: none;
+}
+
 @media (max-width: 900px) {
   #header {
     display: none;

@@ -27,7 +27,7 @@ block content
           .p_stack
             p 
               b Номер операции:
-              |  00063309
+              |  16283746842
             p 
               b Сумма платежа: 
               |  #{value},00 $
@@ -44,16 +44,16 @@ block content
         .form_wrapper
           form#payment
             .form_block
-              label.form_label(for="id1") Номер карты
+              label.form_label(for="id1")#card_number Номер карты
               input(type="text" name="number" placeholder='**** **** **** ****' required).form_input#id1
             .form_block
               label.form_label Владелец карты
               input(type="text" name="name" placeholder='ФАМИЛИЯ ИМЯ' required).form_input
             .form_block              
               label.form_label Срок окончания 
-              input(type="text" name="expiry" placeholder='xx / xxxx' required).form_input
+              input(type="text" name="expiry" placeholder='ММ / ГГГГ' required).form_input
             .form_block
-              label.form_label CVC - код
+              label.form_label#cvc_code CVC - код
               input(type="text" name="cvc" placeholder='CVC' required).form_input
             button(type='submit').btn.form_btn.btn_main
               i.fa.fa-lock.g

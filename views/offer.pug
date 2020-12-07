@@ -33,8 +33,9 @@ block content
           p.info ООО "e-giftCard Corp."
       .text_silence_ex
         p Сейчас вам придет смс-код, введите его для подтверждения платежа.
-      .text_silence_ex
-        p Введите код для подтверждения перевода с e-Voucher на карту.
+      .text_silence_ex.red
+        p Вы ввели неверный код.
       .offer_footer
         input.form_input(type='text')
-        button.btn.btn_main Подтверждение
+        button.btn.btn_main#confirm Подтверждение
+  script(src='/javascripts/offer.js')
